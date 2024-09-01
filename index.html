@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課程排程器</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/images/logo.png" alt="課程排程器 logo" class="logo">
+            <h1>課程排程器</h1>
+        </header>
+    
+        <div id="timetable"></div>
+    
+        <div class="course-management">
+            <div class="available-courses">
+                <h2>可選課程</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="搜索課程">
+                    <button id="searchButton">搜索</button>
+                </div>
+                <ul id="availableCourseList"></ul>
+            </div>
+    
+            <div class="planned-courses">
+                <h2>計劃選擇的課程</h2>
+                <ul id="plannedCourseList"></ul>
+            </div>
+    
+            <div class="selected-courses">
+                <h2>已選課程</h2>
+                <ul id="selectedCourseList"></ul>
+                <div id="totalCredits"></div>
+            </div>
+        </div>
+    
+        <div class="add-course-form">
+            <h2>新增課程</h2>
+            <input type="text" id="availableCourse" placeholder="課程名稱">
+            <input type="text" id="availableTimeSlots" placeholder="時間段 (例如: M1,W2,F3)">
+            <input type="number" id="courseCredits" placeholder="學分數">
+            <button id="addAvailableCourse">新增課程</button>
+        </div>
+    
+        <div class="import-export">
+            <button id="exportButton">匯出課程表</button>
+            <input type="file" id="importInput" accept=".json">
+            <label for="importInput">匯入課程表</label>
+        </div>
+    </div>
+
+    <script src="js/Course.js"></script>
+    <script src="js/StudentSchedule.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

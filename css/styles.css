@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#timetable table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#timetable th, #timetable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#timetable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#timetable td:first-child,
+#timetable td:nth-child(2) {
+    background-color: #f2f2f2;
+}
+
+#timetable td:first-child {
+    font-weight: bold;
+}
+
+#timetable tr:hover {
+    background-color: #f5f5f5;
+}
+
+#timetable td > div {
+    margin: 2px 0;
+    padding: 2px;
+    border-radius: 3px;
+}
+.course-management {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.available-courses, .planned-courses, .selected-courses {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.course-management ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.course-management li {
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.course-management button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.course-management button:hover {
+    background-color: #45a049;
+}
+
+.search-container {
+    margin-bottom: 10px;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 5px;
+}
+
+#searchButton {
+    width: 25%;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #45a049;
+}
+
+.add-course-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-course-form input {
+    width: 40%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#addAvailableCourse {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addAvailableCourse:hover {
+    background-color: #45a049;
+}
+
+.import-export {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.import-export button, .import-export label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.import-export input[type="file"] {
+    display: none;
+}
+
+.import-export label:hover, .import-export button:hover {
+    background-color: #45a049;
+}
+
+#totalCredits {
+    margin-top: 10px;
+    font-weight: bold;
+}

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./:/usr/share/nginx/html
+    networks:
+      - app-network
+    depends_on:
+      - cors-anywhere
+
+  cors-anywhere:
+    build: ./cors-anywhere
+    ports:
+      - "8080:8080"  # 添加這行來暴露 CORS Anywhere 的端口
+    networks:
+      - app-network
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+
+networks:
+  app-network:
+    driver: bridge
