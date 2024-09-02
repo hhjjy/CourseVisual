@@ -398,8 +398,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const params = { ...defaultParams, ...searchParams };
     
         const apiUrl = 'https://querycourse.ntust.edu.tw/querycourse/api/courses';
-        // const proxyUrl = '/';  // 本地端開發 用 192.168.192.100:8080 記得要打開 node server.js 
-        const proxyUrl = '/';  // 使用相對路徑 透過nginx 轉發到 192.168.192.100:8080
+        // const proxyUrl = '';  // 本地端開發 用 192.168.192.100:8080 記得要打開 node server.js 
+        const proxyUrl = 'https://192.168.192.100:8080/';  // 使用相對路徑 透過nginx 轉發到 192.168.192.100:8080
         const fullUrl = `${proxyUrl}${apiUrl}`;
     
     
